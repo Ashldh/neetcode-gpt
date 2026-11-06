@@ -8,6 +8,7 @@ class Solution:
         # z is a 1D NumPy array of logits
         # Hint: subtract max(z) for numerical stability before computing exp
         # return np.round(your_answer, 4)
-        exp_z=np.exp(z-np.max(z))
-        z=exp_z/np.sum(exp_z)
-        return np.round(z,4)
+        st=z-np.max(z);
+        exs=np.exp(st)
+        ans=np.round(exs/np.sum(exs),4)
+        return ans
